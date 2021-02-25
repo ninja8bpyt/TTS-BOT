@@ -57,7 +57,6 @@ async def texf(client, message):
            myobj = gTTS(text=message.text, lang=language_to_audio, slow=False)   
            myobj.save(new_file)
            await message.reply_audio(new_file)
-           await a.edit("**Thanks for using me. 
-My Creator - @Ninja8bpYt**")
+           await a.edit("**Thanks for using me. My Creator - @Ninja8bpYt**")
 
 tts.run()
