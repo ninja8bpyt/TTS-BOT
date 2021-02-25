@@ -15,9 +15,9 @@ else:
    
 tts = Client(
     "text to speech bot",
-    api_id=Config.API_ID,
-    api_hash=Config.API_HASH,
-    bot_token=Config.TG_BOT_TOKEN,
+    api_id=2179686,
+    api_hash=e843e77278c40597cb6e143a69011b03,
+    bot_token=1670277050:AAFog9hxTlSI7hd_CiMl-uEfncjWKc-ka5A,
 )
 
 
