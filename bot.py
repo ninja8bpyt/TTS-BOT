@@ -25,7 +25,7 @@ tts = Client(
 async def start(client, message):
         await message.reply_text(
         text=f"""**Hi {message.from_user.first_name},
-How Are You?/n I'm A simple Text To speech bot/n I can convert your text into speech of any language./n STEPS : First Send Me The Text Which You Want To Convert. After Sending It To Me Send Your Langauge Code To Me./n For Example: en=English , hi=hindi ./n You don't know your code? So google it,**""")
+How Are You? I'm A simple Text To speech bot I can convert your text into speech of any language. STEPS : First Send Me The Text Which You Want To Convert. After Sending It To Me Send Your Langauge Code To Me. For Example: en=English , hi=hindi . You don't know your code? So google it,**""")
 
 
 @tts.on_message(filters.text & ~filters.reply)
@@ -36,14 +36,14 @@ async def texf(client, message):
 
            language = await client.ask(
            message.chat.id,
-           "**Plz enter an language code\n **[LANGUAGE CODE LIST](https://www.google.com/url?sa=t&source=web&rct=j&url=https://cloud.google.com/text-to-speech/docs/voices&ved=2ahUKEwir4pPLlr7uAhWLwjgGHQAVAQAQFjACegQIDBAC&usg=AOvVaw3Q_9UBb0Xo-ljg87RGPX-8&cshid=1611821833928)",
+           "**Plz enter an language code  **[LANGUAGE CODE LIST](https://www.google.com/url?sa=t&source=web&rct=j&url=https://cloud.google.com/text-to-speech/docs/voices&ved=2ahUKEwir4pPLlr7uAhWLwjgGHQAVAQAQFjACegQIDBAC&usg=AOvVaw3Q_9UBb0Xo-ljg87RGPX-8&cshid=1611821833928)",
            reply_markup=ForceReply(True),
         )  
 
            language_to_audio = language.text.lower()
            if language.text.lower() not in tts_langs():
             await message.reply_text(
-             "```Wrong Language Code/n Example : en=English , hi=hindi```",
+             "```Wrong Language Code. Example : en=English , hi=hindi```",
              quote=True,
              parse_mode="md"
         )
@@ -57,6 +57,6 @@ async def texf(client, message):
            myobj = gTTS(text=message.text, lang=language_to_audio, slow=False)   
            myobj.save(new_file)
            await message.reply_audio(new_file)
-           await a.edit("**Thanks for using me/n My Creator - @Ninja8bpYt**")
+           await a.edit("**Thanks for using me. My Creator - @Ninja8bpYt**")
 
 tts.run()
