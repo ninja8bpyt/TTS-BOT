@@ -17,7 +17,7 @@ tts = Client(
     "text to speech bot",
     api_id=2179686,
     api_hash=e843e77278c40597cb6e143a69011b03,
-    bot_token=1670277050:AAFog9hxTlSI7hd_CiMl-uEfncjWKc-ka5A,
+    bot_token=1670277050:AAFog9hxTlSI7hd_CiMl-uEfncjWKc-ka5A
 )
 
 
